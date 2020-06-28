@@ -1,0 +1,4 @@
+lib/app/pages/home/widgets/card/card_widget.dart
+test/app/pages/home/widgets/card/card_widget_test.dart
+lib/app/pages/home/widgets/card/card_controller.dart
+test/app/pages/home/widgets/card/card_controller_test.dart

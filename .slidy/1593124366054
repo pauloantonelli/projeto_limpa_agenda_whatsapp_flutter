@@ -1,0 +1,4 @@
+lib/app/pages/home/widgets/card-fundo/card-fundo/card-fundo_widget.dart
+test/app/pages/home/widgets/card-fundo/card-fundo/card-fundo_widget_test.dart
+lib/app/pages/home/widgets/card-fundo/card-fundo/card-fundo_controller.dart
+test/app/pages/home/widgets/card-fundo/card-fundo/card-fundo_controller_test.dart
