@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'historic_controller.dart';
+import 'agenda_controller.dart';
 
-class HistoricPage extends StatefulWidget {
+class AgendaPage extends StatefulWidget {
   final String title;
-  const HistoricPage({Key key, this.title = "Historic"}) : super(key: key);
+  const AgendaPage({Key key, this.title = "Agenda"}) : super(key: key);
 
   @override
-  _HistoricPageState createState() => _HistoricPageState();
+  _AgendaPageState createState() => _AgendaPageState();
 }
 
-class _HistoricPageState
-    extends ModularState<HistoricPage, HistoricController> {
+class _AgendaPageState extends ModularState<AgendaPage, AgendaController> {
   //use 'controller' variable to access controller
 
   @override

@@ -1,0 +1,5 @@
+lib/app/pages/agenda/agenda_module.dart
+lib/app/pages/agenda/agenda_page.dart
+test/app/pages/agenda/agenda_page_test.dart
+lib/app/pages/agenda/agenda_controller.dart
+test/app/pages/agenda/agenda_controller_test.dart

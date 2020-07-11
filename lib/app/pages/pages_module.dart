@@ -1,4 +1,6 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:limpa_agenda_whatsapp/app/pages/agenda/agenda_controller.dart';
+import 'package:limpa_agenda_whatsapp/app/pages/agenda/agenda_page.dart';
 import 'package:limpa_agenda_whatsapp/app/pages/historic/historic_controller.dart';
 import 'package:limpa_agenda_whatsapp/app/pages/historic/historic_page.dart';
 import 'package:limpa_agenda_whatsapp/app/pages/home/home_controller.dart';
@@ -12,6 +14,7 @@ class PagesModule extends ChildModule {
         Bind((_) => HomeController()),
         Bind((_) => WhatsappController()),
         Bind((_) => HistoricController()),
+        Bind((_) => AgendaController()),
       ];
 
   @override
@@ -19,6 +22,7 @@ class PagesModule extends ChildModule {
         Router('/', child: (_, args) => HomePage()),
         Router('/whatsapp', child: (_, args) => WhatsappPage()),
         Router('/historic', child: (_, args) => HistoricPage()),
+        Router('/agenda', child: (_, args) => AgendaPage()),
       ];
 
   static Inject get to => Inject<PagesModule>.of();

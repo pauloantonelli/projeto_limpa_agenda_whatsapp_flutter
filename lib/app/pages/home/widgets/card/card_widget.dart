@@ -8,6 +8,7 @@ class CardWidget extends StatelessWidget {
   String title;
   String subtitle;
   CardWidget({this.title = '', this.subtitle = ''});
+
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -17,7 +18,7 @@ class CardWidget extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(color: Color(0xffcf8a60)),
           width: MediaQuery.of(context).size.width * 0.92,
-          height: MediaQuery.of(context).size.height * 0.58,
+          height: MediaQuery.of(context).size.height * 0.55,
           padding: EdgeInsets.fromLTRB(35.0, 0.0, 20.0, 0.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
