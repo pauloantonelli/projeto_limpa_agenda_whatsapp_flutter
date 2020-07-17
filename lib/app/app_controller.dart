@@ -13,4 +13,3 @@ abstract class _AppControllerBase with Store {
     value++;
   }
 }
-  
