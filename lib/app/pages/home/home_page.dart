@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:limpa_agenda_whatsapp/app/pages/home/Custom/whatsapp-clipper.dart';
-import 'package:limpa_agenda_whatsapp/app/pages/home/widgets/card/card_widget.dart';
-import 'package:limpa_agenda_whatsapp/app/shared/widgets/bottom/bottom_widget.dart';
-import 'package:limpa_agenda_whatsapp/app/shared/widgets/top/top_widget.dart';
+import 'package:whatsapp_agenda/app/pages/home/Custom/whatsapp-clipper.dart';
+import 'package:whatsapp_agenda/app/pages/home/widgets/card/card_widget.dart';
+import 'package:whatsapp_agenda/app/shared/widgets/bottom/bottom_widget.dart';
+import 'package:whatsapp_agenda/app/shared/widgets/top/top_widget.dart';
 import 'home_controller.dart';
 import 'package:lottie/lottie.dart';
 
@@ -43,7 +43,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
                       subtitle:
                           'Entre com um numero de telefone e se esse telefone estiver cadastrado no whatsapp, converse com esse numero sem precisar salvar nada na agenda!',
                       icon: 'whatsapp',
-                      route: 'whatsapp'),
+                      route: "/whatsapp/Chame no Whatsapp/''/'/''/''"),
                   this._cardComposition(
                       title: 'HISTÓRICO',
                       subtitle:

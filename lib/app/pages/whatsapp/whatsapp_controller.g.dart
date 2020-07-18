@@ -54,20 +54,6 @@ mixin _$WhatsappController on _WhatsappControllerBase, Store {
     });
   }
 
-  final _$_WhatsappControllerBaseActionController =
-      ActionController(name: '_WhatsappControllerBase');
-
-  @override
-  void increment() {
-    final _$actionInfo = _$_WhatsappControllerBaseActionController.startAction(
-        name: '_WhatsappControllerBase.increment');
-    try {
-      return super.increment();
-    } finally {
-      _$_WhatsappControllerBaseActionController.endAction(_$actionInfo);
-    }
-  }
-
   @override
   String toString() {
     return '''

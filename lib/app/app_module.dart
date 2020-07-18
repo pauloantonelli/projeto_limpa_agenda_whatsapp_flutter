@@ -1,8 +1,8 @@
-import 'package:limpa_agenda_whatsapp/app/app_controller.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter/material.dart';
-import 'package:limpa_agenda_whatsapp/app/app_widget.dart';
-import 'package:limpa_agenda_whatsapp/app/pages/pages_module.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import 'package:whatsapp_agenda/app/app_controller.dart';
+import 'package:whatsapp_agenda/app/app_widget.dart';
+import 'package:whatsapp_agenda/app/pages/pages_module.dart';
 
 class AppModule extends MainModule {
   @override

@@ -9,33 +9,39 @@ part of 'historic_controller.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$HistoricController on _HistoricControllerBase, Store {
-  final _$sqfliteAtom = Atom(name: '_HistoricControllerBase.sqflite');
+  final _$historicoAtom = Atom(name: '_HistoricControllerBase.historico');
 
   @override
-  dynamic get sqflite {
-    _$sqfliteAtom.reportRead();
-    return super.sqflite;
+  List<Map<String, dynamic>> get historico {
+    _$historicoAtom.reportRead();
+    return super.historico;
   }
 
   @override
-  set sqflite(dynamic value) {
-    _$sqfliteAtom.reportWrite(value, super.sqflite, () {
-      super.sqflite = value;
+  set historico(List<Map<String, dynamic>> value) {
+    _$historicoAtom.reportWrite(value, super.historico, () {
+      super.historico = value;
     });
   }
 
-  final _$getHistoricoAsyncAction =
-      AsyncAction('_HistoricControllerBase.getHistorico');
+  final _$_HistoricControllerBaseActionController =
+      ActionController(name: '_HistoricControllerBase');
 
   @override
-  Future<List<Map<String, dynamic>>> getHistorico() {
-    return _$getHistoricoAsyncAction.run(() => super.getHistorico());
+  dynamic getDataFromDataBase() {
+    final _$actionInfo = _$_HistoricControllerBaseActionController.startAction(
+        name: '_HistoricControllerBase.getDataFromDataBase');
+    try {
+      return super.getDataFromDataBase();
+    } finally {
+      _$_HistoricControllerBaseActionController.endAction(_$actionInfo);
+    }
   }
 
   @override
   String toString() {
     return '''
-sqflite: ${sqflite}
+historico: ${historico}
     ''';
   }
 }

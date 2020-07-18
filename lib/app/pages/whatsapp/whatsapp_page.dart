@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:limpa_agenda_whatsapp/app/shared/utils/media_query.dart';
-import 'package:limpa_agenda_whatsapp/app/shared/widgets/bottom/bottom_widget.dart';
 import 'package:lottie/lottie.dart';
 import 'whatsapp_controller.dart';
 
 class WhatsappPage extends StatefulWidget {
   final String title;
-  const WhatsappPage({Key key, this.title = "Whatsapp"}) : super(key: key);
+  const WhatsappPage({
+    Key key,
+    this.title = "Whatsapp",
+  }) : super(key: key);
 
   @override
   _WhatsappPageState createState() => _WhatsappPageState();
@@ -77,7 +78,7 @@ class _WhatsappPageState
                     ),
                     Expanded(
                       child: TextFormField(
-                        controller: controller.ddd,
+                        controller: controller.telefone,
                         keyboardType: TextInputType.phone,
                         textAlign: TextAlign.left,
                         style: TextStyle(

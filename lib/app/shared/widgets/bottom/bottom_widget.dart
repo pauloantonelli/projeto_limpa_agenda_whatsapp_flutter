@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:limpa_agenda_whatsapp/app/shared/widgets/link-button/link-button/link-button_widget.dart';
+import 'package:whatsapp_agenda/app/shared/widgets/link-button/link-button/link-button_widget.dart';
 
 class BottomWidget extends StatelessWidget {
   @override

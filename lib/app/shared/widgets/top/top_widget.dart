@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:limpa_agenda_whatsapp/app/shared/utils/media_query.dart';
+import 'package:whatsapp_agenda/app/shared/utils/media_query.dart';
 
 class TopWidget extends StatefulWidget {
   @override

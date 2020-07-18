@@ -1,8 +1,8 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:limpa_agenda_whatsapp/app/pages/home/home_page.dart';
-import 'package:limpa_agenda_whatsapp/app/pages/home/home_controller.dart';
+import 'package:whatsapp_agenda/app/pages/home/home_page.dart';
+import 'package:whatsapp_agenda/app/pages/home/home_controller.dart';
 
-import 'package:limpa_agenda_whatsapp/app/pages/home/widgets/card/card_controller.dart';
+import 'package:whatsapp_agenda/app/pages/home/widgets/card/card_controller.dart';
 
 class HomeModule extends ChildModule {
   @override
