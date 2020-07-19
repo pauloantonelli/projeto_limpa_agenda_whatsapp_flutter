@@ -108,3 +108,4 @@ scripts:
   mobx_watch_delete: flutter pub run build_runner watch --delete-conflicting-outputs
   flutter_icons: flutter pub run flutter_launcher_icons:main
   flutter_splash: flutter pub pub run flutter_native_splash:create
+  build: flutter build apk

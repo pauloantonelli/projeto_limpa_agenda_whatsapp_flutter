@@ -9,7 +9,7 @@ class AppWidget extends StatelessWidget {
         primaryColor: Color(0xff0f4336),
       ),
       navigatorKey: Modular.navigatorKey,
-      title: 'Limpa Agenda Whatsapp',
+      title: 'Whatsapp Agenda',
       initialRoute: '/',
       onGenerateRoute: Modular.generateRoute,
     );

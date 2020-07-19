@@ -44,7 +44,7 @@ class _HistoricPageState
                 fontWeight: FontWeight.bold),
           ),
           Text(
-            'Lista de todos os contatos feito recentemente:',
+            'Lista de todos os contatos feitos recentemente:',
             style: TextStyle(
                 color: Color(0xffe53934),
                 fontSize: 15.0,

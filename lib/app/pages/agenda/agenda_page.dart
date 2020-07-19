@@ -60,6 +60,26 @@ class _AgendaPageState extends ModularState<AgendaPage, AgendaController> {
           return Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              SizedBox(
+                height: 20.0,
+              ),
+              Text(
+                'Crie um novo contato',
+                style: TextStyle(
+                    color: Color(0xffe53934),
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.bold),
+              ),
+              Text(
+                'Lista de todos os contatos feitos recentemente:',
+                style: TextStyle(
+                    color: Color(0xffe53934),
+                    fontSize: 15.0,
+                    fontWeight: FontWeight.w600),
+              ),
+              SizedBox(
+                height: 30,
+              ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: Container(

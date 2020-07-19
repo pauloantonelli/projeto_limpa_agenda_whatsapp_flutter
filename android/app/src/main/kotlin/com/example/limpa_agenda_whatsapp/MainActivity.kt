@@ -1,4 +1,4 @@
-package com.example.limpa_agenda_whatsapp
+package com.example.whatsapp_agenda
 
 import io.flutter.embedding.android.FlutterActivity
 
