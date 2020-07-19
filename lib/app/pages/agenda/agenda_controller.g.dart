@@ -9,18 +9,18 @@ part of 'agenda_controller.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$AgendaController on _AgendaControllerBase, Store {
-  final _$valueAtom = Atom(name: '_AgendaControllerBase.value');
+  final _$historicoAtom = Atom(name: '_AgendaControllerBase.historico');
 
   @override
-  int get value {
-    _$valueAtom.reportRead();
-    return super.value;
+  List<Map<String, dynamic>> get historico {
+    _$historicoAtom.reportRead();
+    return super.historico;
   }
 
   @override
-  set value(int value) {
-    _$valueAtom.reportWrite(value, super.value, () {
-      super.value = value;
+  set historico(List<Map<String, dynamic>> value) {
+    _$historicoAtom.reportWrite(value, super.historico, () {
+      super.historico = value;
     });
   }
 
@@ -28,11 +28,11 @@ mixin _$AgendaController on _AgendaControllerBase, Store {
       ActionController(name: '_AgendaControllerBase');
 
   @override
-  void increment() {
+  dynamic getDataFromDataBase() {
     final _$actionInfo = _$_AgendaControllerBaseActionController.startAction(
-        name: '_AgendaControllerBase.increment');
+        name: '_AgendaControllerBase.getDataFromDataBase');
     try {
-      return super.increment();
+      return super.getDataFromDataBase();
     } finally {
       _$_AgendaControllerBaseActionController.endAction(_$actionInfo);
     }
@@ -41,7 +41,7 @@ mixin _$AgendaController on _AgendaControllerBase, Store {
   @override
   String toString() {
     return '''
-value: ${value}
+historico: ${historico}
     ''';
   }
 }
