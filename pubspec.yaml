@@ -103,9 +103,9 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
 scripts:
-  mobx_build: flutter pub run build_runner build --delete-conflicting-outputs
-  mobx_watch: flutter pub run build_runner watch
+  mobb: flutter pub run build_runner build --delete-conflicting-outputs
+  mobx: flutter pub run build_runner watch
   mobx_watch_delete: flutter pub run build_runner watch --delete-conflicting-outputs
   flutter_icons: flutter pub run flutter_launcher_icons:main
   flutter_splash: flutter pub pub run flutter_native_splash:create
-  build: flutter build apk
+  build: flutter build apk --split-per-abi
