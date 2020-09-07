@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:whatsapp_agenda/app/modules/home/home_controller.dart';
+import 'package:whatsapp_agenda/app/pages/home/home_controller.dart';
 
 class CardWidget extends StatelessWidget {
   final homeController = Modular.get<HomeController>();

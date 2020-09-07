@@ -25,6 +25,11 @@ class StringEmptyError implements OpenChatWhatsappError {
   StringEmptyError({this.message});
 }
 
+class DatasourceError implements OpenChatWhatsappError {
+  final String message;
+  DatasourceError({this.message});
+}
+
 class OpenChatWhatsappRepositoryError extends Failure {
   final String message;
   OpenChatWhatsappRepositoryError({this.message});

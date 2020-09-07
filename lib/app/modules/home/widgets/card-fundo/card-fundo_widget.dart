@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:whatsapp_agenda/app/modules/home/home_controller.dart';
+import 'package:whatsapp_agenda/app/pages/home/home_controller.dart';
+import 'card-fundo_controller.dart';
 
-class CardWidget extends StatelessWidget {
+class CardFundoWidget extends StatefulWidget {
+  @override
+  _CardFundoWidgetState createState() => _CardFundoWidgetState();
+}
+
+class _CardFundoWidgetState
+    extends ModularState<CardFundoWidget, CardFundoController> {
   final homeController = Modular.get<HomeController>();
-  String title;
-  String subtitle;
-  CardWidget({this.title = '', this.subtitle = ''});
 
   @override
   Widget build(BuildContext context) {
@@ -18,23 +22,23 @@ class CardWidget extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(color: Color(0xffcf8a60)),
           width: MediaQuery.of(context).size.width * 0.92,
-          height: MediaQuery.of(context).size.height * 0.55,
+          height: MediaQuery.of(context).size.height * 0.54,
           padding: EdgeInsets.fromLTRB(35.0, 0.0, 20.0, 0.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 24.0),
+                padding: EdgeInsets.symmetric(vertical: 35.0),
                 child: Align(
                   alignment: Alignment.centerRight,
-                  heightFactor: 1.2,
+                  heightFactor: 2.0,
                   child: RotatedBox(
                     quarterTurns: 3,
                     child: Observer(
                       builder: (_) => Text(
-                        this.homeController.title ?? this.title,
-                        textAlign: TextAlign.left,
+                        this.homeController.title,
+                        textAlign: TextAlign.right,
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 15.0,
@@ -48,7 +52,7 @@ class CardWidget extends StatelessWidget {
                 constraints: BoxConstraints(maxWidth: 300.0),
                 child: Observer(
                   builder: (_) => Text(
-                    this.homeController.title ?? this.title,
+                    this.homeController.title,
                     textAlign: TextAlign.left,
                     style: TextStyle(
                         color: Colors.white,
@@ -58,13 +62,13 @@ class CardWidget extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 15.0,
+                height: 17.0,
               ),
               ConstrainedBox(
                 constraints: BoxConstraints(maxWidth: 250.0),
                 child: Observer(
                   builder: (_) => Text(
-                    this.homeController.subtitle ?? this.subtitle,
+                    this.homeController.subtitle,
                     textAlign: TextAlign.left,
                     style: TextStyle(
                       color: Colors.white,
@@ -75,7 +79,7 @@ class CardWidget extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 27.0,
+                height: 37.0,
               ),
             ],
           ),

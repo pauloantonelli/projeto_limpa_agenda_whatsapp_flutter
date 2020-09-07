@@ -4,7 +4,7 @@ import 'package:whatsapp_agenda/app/modules/whatsapp/domain/repository/open_chat
 import 'package:whatsapp_agenda/app/modules/whatsapp/infra/datasource/open_chat_whatsapp_datasource.dart';
 
 class OpenChatWhatsappRepositoryImpl implements OpenChatWhatsappRepository {
-  final OpenChatDataSource _datasource;
+  final OpenChatWhatsappDatasource _datasource;
   // final presenter;
 
   OpenChatWhatsappRepositoryImpl(this._datasource);

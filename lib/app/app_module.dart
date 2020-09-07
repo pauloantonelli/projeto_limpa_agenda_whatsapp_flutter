@@ -4,6 +4,8 @@ import 'package:whatsapp_agenda/app/app_controller.dart';
 import 'package:whatsapp_agenda/app/app_widget.dart';
 import 'package:whatsapp_agenda/app/pages/pages_module.dart';
 
+import 'modules/whatsapp/whatsapp_module.dart';
+
 class AppModule extends MainModule {
   @override
   List<Bind> get binds => [
@@ -12,7 +14,7 @@ class AppModule extends MainModule {
 
   @override
   List<Router> get routers => [
-        Router(Modular.initialRoute, module: PagesModule()),
+        Router(Modular.initialRoute, module: WhatsappModule()),
       ];
 
   @override

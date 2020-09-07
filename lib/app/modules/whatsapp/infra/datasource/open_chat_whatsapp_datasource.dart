@@ -1,5 +1,3 @@
-import 'package:flutter/foundation.dart';
-
-abstract class OpenChatDataSource {
+abstract class OpenChatWhatsappDatasource {
   Future<bool> openChat(int ddd, int telefone, String mensagem);
 }
