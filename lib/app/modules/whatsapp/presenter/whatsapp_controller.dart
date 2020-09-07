@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:whatsapp_agenda/app/modules/whatsapp/domain/error/error.dart';
 import 'package:whatsapp_agenda/app/modules/whatsapp/domain/usecase/open_chat_whatsapp.dart';
 import 'package:whatsapp_agenda/app/pages/historic/model/historico.model.dart';
 import 'package:whatsapp_agenda/app/shared/utils/sqlite.dart';
 import 'package:mobx/mobx.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 part 'whatsapp_controller.g.dart';
 
