@@ -73,7 +73,6 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
       String route = '/'}) {
     return GestureDetector(
       onTap: () {
-        print(title);
         Modular.to.pushNamed(route);
       },
       child: Container(

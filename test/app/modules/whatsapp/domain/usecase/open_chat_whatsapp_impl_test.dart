@@ -1,6 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:whatsapp_agenda/app/modules/historic/domain/usecase/insert_new_historic/insert_new_historic_impl.dart';
 import 'package:whatsapp_agenda/app/modules/whatsapp/domain/error/error.dart';
 import 'package:whatsapp_agenda/app/modules/whatsapp/domain/repository/open_chat_whatsapp_repository.dart';
 import 'package:whatsapp_agenda/app/modules/whatsapp/domain/usecase/open_chat_whatsapp_impl.dart';
@@ -8,10 +9,15 @@ import 'package:whatsapp_agenda/app/modules/whatsapp/domain/usecase/open_chat_wh
 class OpenChatWhatsappRepositoryMock extends Mock
     implements OpenChatWhatsappRepository {}
 
+class InsertNewHistoricImplMock extends Mock implements InsertNewHistoricImpl {}
+
 main() {
-  final OpenChatWhatsappRepositoryMock _repository =
+  final OpenChatWhatsappRepository _repository =
       new OpenChatWhatsappRepositoryMock();
-  final OpenChatWhatsappImpl usecase = new OpenChatWhatsappImpl(_repository);
+  final InsertNewHistoricImpl insertNewHistoric =
+      new InsertNewHistoricImplMock();
+  final OpenChatWhatsappImpl usecase =
+      new OpenChatWhatsappImpl(_repository, insertNewHistoric);
 
   test('deve retornar o ddd, telefone, e a mensagem que receber', () async {
     when(_repository.setNecessaryDDDAndTelefoneAndMessageToOpenWhatsapp(

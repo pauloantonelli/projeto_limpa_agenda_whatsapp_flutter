@@ -10,9 +10,9 @@ class InsertNewHistoricRepositoryImpl implements InsertNewHistoricRepository {
   InsertNewHistoricRepositoryImpl(this._datasource);
 
   @override
-  Future<Either<InsertHistoricDataBaseError, Future<int>>> insertNewHistorico(
+  Future<Either<InsertHistoricDataBaseError, bool>> insertNewHistorico(
       HistoricEntity model) async {
-    final result = _datasource.insertNewHistorico(model);
+    final result = await _datasource.insertNewHistorico(model);
     return Right(result);
   }
 }

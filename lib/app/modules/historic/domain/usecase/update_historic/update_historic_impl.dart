@@ -9,8 +9,7 @@ class UpdateHistoricImpl implements UpdateHistoric {
 
   UpdateHistoricImpl(this._repository);
   @override
-  Future<Either<UpdateHistoricDataBaseError, Future>> call(
-      HistoricEntity model) {
+  Future<Either<UpdateHistoricDataBaseError, bool>> call(HistoricEntity model) {
     return _repository.updateHistorico(model);
   }
 }

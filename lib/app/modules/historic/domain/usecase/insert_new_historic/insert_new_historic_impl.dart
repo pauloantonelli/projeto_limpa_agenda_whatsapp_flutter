@@ -9,8 +9,8 @@ class InsertNewHistoricImpl implements InsertNewHistoric {
 
   InsertNewHistoricImpl(this._repository);
   @override
-  Future<Either<InsertHistoricDataBaseError, Future>> call(
-      HistoricEntity model) {
-    return _repository.insertNewHistorico(model);
+  Future<Either<InsertHistoricDataBaseError, bool>> call(HistoricEntity model) {
+    final insertHistorico = _repository.insertNewHistorico(model);
+    return insertHistorico;
   }
 }

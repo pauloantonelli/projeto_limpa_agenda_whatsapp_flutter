@@ -10,9 +10,9 @@ class UpdateHistoricRepositoryImpl implements UpdateHistoricRepository {
   UpdateHistoricRepositoryImpl(this._datasource);
 
   @override
-  Future<Either<UpdateHistoricDataBaseError, Future<int>>> updateHistorico(
+  Future<Either<UpdateHistoricDataBaseError, bool>> updateHistorico(
       HistoricEntity model) async {
-    final result = _datasource.updateHistorico(model);
+    final result = await _datasource.updateHistorico(model);
     return Right(result);
   }
 }

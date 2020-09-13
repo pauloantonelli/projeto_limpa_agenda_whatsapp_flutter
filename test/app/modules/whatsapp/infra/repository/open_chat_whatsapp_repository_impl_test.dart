@@ -22,7 +22,7 @@ main() {
             011, 983334275, 'ola mundo');
     expect(result.fold((l) => l, (r) => r), true);
   });
-  test('deve retornar um erro caso o envio tenha falhadado', () async {
+  test('deve retornar um erro caso o envio tenha falhado', () async {
     when(dataSource.openChat(any, any, any))
         .thenAnswer((_) => Future.value(false));
     final result =

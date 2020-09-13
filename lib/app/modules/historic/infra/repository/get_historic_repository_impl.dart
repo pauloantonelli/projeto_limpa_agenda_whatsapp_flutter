@@ -9,9 +9,9 @@ class GetHistoricRepositoryImpl implements GetHistoricRepository {
   GetHistoricRepositoryImpl(this._datasource);
 
   @override
-  Future<Either<GetHistoricDataBaseError, Future<List<Map<String, dynamic>>>>>
+  Future<Either<GetHistoricDataBaseError, List<Map<String, dynamic>>>>
       getHistorico() async {
-    final result = _datasource.getDataFromDataBase();
+    final result = await _datasource.getDataFromDataBase();
     return Right(result);
   }
 }

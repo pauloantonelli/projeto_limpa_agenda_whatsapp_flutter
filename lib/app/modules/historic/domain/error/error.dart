@@ -20,6 +20,11 @@ class UpdateHistoricDataBaseError implements HistoricError {
   UpdateHistoricDataBaseError({this.message});
 }
 
+class DeleteHistoricDataBaseError implements HistoricError {
+  final String message;
+  DeleteHistoricDataBaseError({this.message});
+}
+
 class HistoricRepositoryError extends Failure {
   final String message;
   HistoricRepositoryError({this.message});
