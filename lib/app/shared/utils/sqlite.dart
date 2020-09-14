@@ -1,4 +1,3 @@
-import 'package:mobx/mobx.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:whatsapp_agenda/app/pages/historic/model/historico.model.dart';

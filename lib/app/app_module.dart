@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:whatsapp_agenda/app/app_controller.dart';
 import 'package:whatsapp_agenda/app/app_widget.dart';
-import 'package:whatsapp_agenda/app/pages/pages_module.dart';
 
-import 'modules/whatsapp/whatsapp_module.dart';
+import 'modules/funcionality_module.dart';
 
 class AppModule extends MainModule {
   @override
@@ -14,7 +13,7 @@ class AppModule extends MainModule {
 
   @override
   List<Router> get routers => [
-        Router(Modular.initialRoute, module: WhatsappModule()),
+        Router(Modular.initialRoute, module: FuncionalityModule()),
       ];
 
   @override

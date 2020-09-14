@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:whatsapp_agenda/app/modules/whatsapp/domain/error/error.dart';
 import 'package:whatsapp_agenda/app/modules/whatsapp/domain/usecase/open_chat_whatsapp.dart';
 import 'package:whatsapp_agenda/app/pages/historic/model/historico.model.dart';
 import 'package:whatsapp_agenda/app/shared/utils/sqlite.dart';
 import 'package:mobx/mobx.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 part 'whatsapp_controller.g.dart';
 
@@ -36,9 +34,7 @@ abstract class _WhatsappControllerBase with Store, Sqlite {
     this.telefone = new TextEditingController(text: this.historicoTelefone);
     this.mensagem = new TextEditingController(text: this.historicoMensagem);
     if (this.telefone.value.text.length == 1) {
-      this.ddd.clear();
-      this.telefone.clear();
-      this.mensagem.clear();
+      this.reset();
     } else if (this.telefone.value.text.length > 1) {
       this.insert = false;
     }
@@ -65,31 +61,6 @@ abstract class _WhatsappControllerBase with Store, Sqlite {
         }
       },
     );
-    // final url = 'whatsapp://send?phone=55$ddd$telefone&text=$mensagem';
-    // if (await canLaunch(url)) {
-    //   if (this.insert == true) {
-    //     this.insertNewHistorico(
-    //         ddd: '$ddd', telefone: '$telefone', mensagem: mensagem);
-    //     this.snackbar(context: context, message: 'Abrindo Whatsapp');
-    //   } else {
-    //     int id = int.parse(this.idMensagem);
-    //     this.updateHistorico(
-    //         id: id, ddd: '$ddd', telefone: '$telefone', mensagem: mensagem);
-    //     this.snackbar(context: context, message: 'Abrindo Whatsapp');
-    //   }
-    //   await launch(url).then((value) => Modular.to.pushReplacementNamed('/'));
-    //   this.reset();
-    // } else {
-    //   if (this.insert == true) {
-    //     this.insertNewHistorico(
-    //         ddd: '$ddd', telefone: '$telefone', mensagem: mensagem);
-    //   } else {
-    //     int id = int.parse(this.idMensagem);
-    //     this.updateHistorico(
-    //         id: id, ddd: '$ddd', telefone: '$telefone', mensagem: mensagem);
-    //   }
-    //
-    // }
   }
 
   messageEmptyError(
@@ -106,19 +77,6 @@ abstract class _WhatsappControllerBase with Store, Sqlite {
     this.snackbar(
         context: context, message: 'Whatsapp não instalado', label: 'Fechar');
     throw 'Whatsapp nao instalado';
-  }
-
-  insertNewHistorico({String ddd, String telefone, String mensagem}) async {
-    HistoricoModel model =
-        new HistoricoModel(ddd: ddd, telefone: telefone, mensagem: mensagem);
-    await Sqlite().create(model);
-  }
-
-  updateHistorico(
-      {int id, String ddd, String telefone, String mensagem}) async {
-    HistoricoModel model = new HistoricoModel(
-        id: id, ddd: ddd, telefone: telefone, mensagem: mensagem);
-    await Sqlite().updateDB(model);
   }
 
   reset() {

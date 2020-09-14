@@ -5,7 +5,6 @@ import 'package:whatsapp_agenda/app/modules/whatsapp/infra/datasource/open_chat_
 
 class OpenChatWhatsappRepositoryImpl implements OpenChatWhatsappRepository {
   final OpenChatWhatsappDatasource _datasource;
-  // final presenter;
 
   OpenChatWhatsappRepositoryImpl(this._datasource);
 
