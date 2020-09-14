@@ -1,6 +1,7 @@
 # whatsapp_agenda
 
-A new Flutter project.
+Projeto mobile Flutter que permite abrir uma conversa no whatsapp sem ter o numero salvo na sua agenda.
+Esse aplicativo possibilita poder salvar o numero usado na agenda tambem.
 
 ## Getting Started
 
