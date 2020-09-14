@@ -1,7 +1,12 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:whatsapp_agenda/app/modules/agenda/domain/usecase/add_new_contact_impl.dart';
+import 'package:whatsapp_agenda/app/modules/agenda/infra/repository/add_new_contact_repository_impl.dart';
+import 'package:whatsapp_agenda/app/modules/agenda/presenter/agenda_controller.dart';
+import 'package:whatsapp_agenda/app/modules/agenda/presenter/agenda_page.dart';
 import 'package:whatsapp_agenda/app/modules/home/home_controller.dart';
 import 'package:whatsapp_agenda/app/modules/home/home_page.dart';
 
+import 'agenda/datasource/contact_service/contact_service.dart';
 import 'historic/datasource/sqlite/sqlite.dart';
 import 'historic/domain/usecase/delete_historic/delete_historic_impl.dart';
 import 'historic/domain/usecase/get_historic/get_historic_impl.dart';
@@ -51,7 +56,11 @@ class FuncionalityModule extends ChildModule {
         Bind((i) => UpdateHistoricRepositoryImpl(i.get())),
         Bind((i) => DeleteHistoricRepositoryImpl(i.get())),
         Bind((i) => HistoricSqliteDataSource()),
-        Bind((i) => HistoricController(i.get(), i.get()))
+        Bind((i) => HistoricController(i.get(), i.get())),
+        Bind((i) => AddNewContactImpl(i.get())),
+        Bind((i) => AddNewContactRepositoryImpl(i.get())),
+        Bind((i) => ContactDataSource()),
+        Bind((i) => AgendaController(i.get(), i.get()))
       ];
 
   @override
@@ -67,7 +76,7 @@ class FuncionalityModule extends ChildModule {
           ),
         ),
         Router('/historic', child: (_, args) => HistoricPage()),
-        // Router('/agenda', child: (_, args) => AgendaPage()),
+        Router('/agenda', child: (_, args) => AgendaPage()),
       ];
 
   static Inject get to => Inject<FuncionalityModule>.of();
