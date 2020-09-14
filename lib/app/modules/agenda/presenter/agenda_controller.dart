@@ -1,4 +1,3 @@
-import 'package:contacts_service/contacts_service.dart';
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -8,8 +7,6 @@ import 'package:whatsapp_agenda/app/modules/agenda/domain/entity/entity-contact.
 import 'package:whatsapp_agenda/app/modules/agenda/domain/usecase/add_new_contact_impl.dart';
 import 'package:whatsapp_agenda/app/modules/historic/domain/usecase/get_historic/get_historic_impl.dart';
 
-import 'package:whatsapp_agenda/app/shared/utils/sqlite.dart';
-
 part 'agenda_controller.g.dart';
 
 class AgendaController = _AgendaControllerBase with _$AgendaController;
@@ -17,6 +14,7 @@ class AgendaController = _AgendaControllerBase with _$AgendaController;
 abstract class _AgendaControllerBase with Store {
   TextEditingController controllerFirstName = new TextEditingController();
   TextEditingController controllerLastName = new TextEditingController();
+  @observable
   BehaviorSubject<bool> openSnackbar = new BehaviorSubject<bool>.seeded(false);
   @observable
   List<Map<String, dynamic>> historico = new List<Map<String, dynamic>>();
