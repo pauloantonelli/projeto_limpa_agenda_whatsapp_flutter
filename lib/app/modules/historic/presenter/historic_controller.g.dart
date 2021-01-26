@@ -24,18 +24,13 @@ mixin _$HistoricController on _HistoricControllerBase, Store {
     });
   }
 
-  final _$_HistoricControllerBaseActionController =
-      ActionController(name: '_HistoricControllerBase');
+  final _$getDataFromDataBaseAsyncAction =
+      AsyncAction('_HistoricControllerBase.getDataFromDataBase');
 
   @override
-  dynamic getDataFromDataBase() {
-    final _$actionInfo = _$_HistoricControllerBaseActionController.startAction(
-        name: '_HistoricControllerBase.getDataFromDataBase');
-    try {
-      return super.getDataFromDataBase();
-    } finally {
-      _$_HistoricControllerBaseActionController.endAction(_$actionInfo);
-    }
+  Future getDataFromDataBase() {
+    return _$getDataFromDataBaseAsyncAction
+        .run(() => super.getDataFromDataBase());
   }
 
   @override

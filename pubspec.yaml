@@ -59,7 +59,6 @@ flutter_native_splash:
   image: "assets/logo.png"
   color: "0f4336"
 
-
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
@@ -104,9 +103,9 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
 scripts:
-  mobb: flutter pub run build_runner build --delete-conflicting-outputs
-  mobx: flutter pub run build_runner watch
-  mobx_watch_delete: flutter pub run build_runner watch --delete-conflicting-outputs
-  flutter_icons: flutter pub run flutter_launcher_icons:main
-  flutter_splash: flutter pub pub run flutter_native_splash:create
-  build: flutter build apk --split-per-abi
+  mobb: fvm flutter pub run build_runner build --delete-conflicting-outputs
+  mobx: fvm flutter pub run build_runner watch
+  mobx_watch_delete: fvm flutter pub run build_runner watch --delete-conflicting-outputs
+  flutter_icons: fvm flutter pub run flutter_launcher_icons:main
+  flutter_splash: fvm flutter pub pub run flutter_native_splash:create
+  build: fvm flutter build apk --split-per-abi
